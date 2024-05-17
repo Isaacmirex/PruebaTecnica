@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Reportes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Recargar los datos cambiando la página de la tabla, dar click en los cuadros</h1>
+        
+        <div class="dashboard">
+            <div class="card red" onclick="highlightCard(this)">
+                <div class="card-title">SIN LEER</div>
+                <div class="card-number">2</div>
+            </div>
+            <div class="card yellow" onclick="highlightCard(this)">
+                <div class="card-title">CONTACTANDO</div>
+                <div class="card-number">4</div>
+                <div class="card-subtitle">Mio: 0</div>
+            </div>
+            <div class="card pink" onclick="highlightCard(this)">
+                <div class="card-title">ESCALADO</div>
+                <div class="card-number">11</div>
+                <div class="card-subtitle">Mio: 0</div>
+            </div>
+            <div class="card green" onclick="highlightCard(this)">
+                <div class="card-title">ORDENADO</div>
+                <div class="card-number">130</div>
+                <div class="card-subtitle">Mio: 0</div>
+            </div>
+            <div class="card cyan" onclick="highlightCard(this)">
+                <div class="card-title">TERMINADO</div>
+                <div class="card-number">41231</div>
+                <div class="card-subtitle">Mio: 0</div>
+            </div>
+            <div class="card add-card">
+                <span class="material-icons">add</span>
+            </div>
+        </div>
+        <div class="table-container">
+            <table class="table table-bordered table-striped table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Ingresado por.</th>
+                        <th>Ticket</th>
+                        <th>Cliente</th>
+                        <th>Requerimiento</th>
+                        <th>Prioridad</th>
+                        <th>Transcurrido</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody id="table-body">
+                    <tr>
+                        <td>f</td>
+                        <td>054723</td>
+                        <td>Cliente 1</td>
+                        <td>Otros</td>
+                        <td class="priority">0</td>
+                        <td class="time">00:49:59</td>
+                        <td>ANEXO 1</td>
+                    </tr>
+                    <tr>
+                        <td>f</td>
+                        <td>054734</td>
+                        <td>Cliente 2</td>
+                        <td>Otros</td>
+                        <td class="priority">0</td>
+                        <td class="time">00:00:00</td>
+                        <td>ANEXO 2</td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(1)">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" onclick="changePage(2)">2</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
